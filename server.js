@@ -12,6 +12,9 @@ const app = require('./app');
 
 // port connection
 const port = process.env.PORT || 4040;
+app.get("/", (req, res) => {
+  res.send("Server Is Running ");
+});
 
 app.listen(port, () => {
     console.log(`Server is running at ${port}`.yellow.bold);
